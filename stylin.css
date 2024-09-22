@@ -124,12 +124,13 @@ img {
     }
 
     .wrapper {
-        border-radius: 2rem;
+        border-radius: 1rem;
         transform: rotate(0);
     }
 
     .fab {
         grid-row: unset;
+        border-radius: 60% 60% 1rem 1rem;
     }
 
     .logo-wrapper {
@@ -137,7 +138,7 @@ img {
     }
 
     .magic-mountain h2 {
-        font-size: 2rem;
+        font-size: 3.2rem;
     }
 
     .contact a {
