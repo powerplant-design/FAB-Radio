@@ -125,16 +125,22 @@ img {
 
     .wrapper {
         border-radius: 1rem;
+        padding: 0.5rem;
         transform: rotate(0);
     }
 
     .fab {
         grid-row: unset;
         border-radius: 60% 60% 1rem 1rem;
+        padding-bottom: 0.25rem;
     }
 
     .logo-wrapper {
         max-width: 50vw;
+    }
+
+    .magic-mountain {
+        padding-top: 1rem;
     }
 
     .magic-mountain h2 {
