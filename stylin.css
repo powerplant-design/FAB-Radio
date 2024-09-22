@@ -7,13 +7,13 @@
     font-family: BN Callina;
     src: url(/type/BNCallinaScript.otf);
 }
+
 html {
     background-color: #252525;
 }
+
 body {
     font-family: Overused;
-    /* background-color: #d9d9d9; */
-    /* background-color: #1c1c1c; */
     background: linear-gradient(#252525, #000);
 }
 
@@ -26,24 +26,29 @@ main {
     height: calc(100vh - 4rem);
 }
 
-h2 {
-    text-align: center;
-    font-size: 1rem;
+h1 {
     margin: 0;
 }
 
+h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0.25rem 0 0 0;
+}
+
 a {
+    font-size: 1.6rem;
     color: black;
     text-decoration: none;
 }
 
 p {
+    font-size: 1.6rem;
     margin: 0.6rem 0;
 }
 
 img {
     max-width: 100%;
-    max-height: 260px;
 }
 
 .wrapper {
@@ -54,6 +59,10 @@ img {
     place-items: center;
     transition: transform ease-out 400ms;
     transform: rotate(2deg);
+    box-shadow:
+        inset 0 -10px 30px rgba(0, 0, 0, 0.2),
+        inset 0 -5px 15px rgba(0, 0, 0, 0.4),
+        inset 0 0px 5px rgba(0, 0, 0, 0.6);
 }
 
 .logo-container {
@@ -72,18 +81,56 @@ img {
 .dohyo {
     background-color: #f15822;
     transform: rotate(-2deg);
+    position: relative;
 
     &:hover {
         transform: rotate(0);
+    }
+
+    &::after {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    &:hover::after {
+        opacity: 1;
     }
 }
 
 .magic-mountain {
     background-color: #00683a;
     transform: rotate(-3deg);
+    position: relative;
 
     &:hover {
         transform: rotate(0);
+    }
+
+    &::after {
+        top: 10px;
+        left: 10px;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+}
+
+.dohyo,
+.magic-mountain {
+    &::after {
+        content: "";
+        pointer-events: none;
+        opacity: 0;
+        width: 100px;
+        height: 50px;
+        background-size: contain;
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-image: url(./img/eyes.gif);
+        transition: 400ms;
     }
 }
 
@@ -91,23 +138,23 @@ img {
     margin: 0;
     color: white;
     text-align: center;
-    letter-spacing: -2px;
+    letter-spacing: -3px;
     font-size: 5.5vw;
     line-height: 0.9;
     font-family: BN Callina;
 }
 
 .logo-wrapper {
-    max-width: 25vw;
+    max-width: 26vw;
 }
 
 .logo-dohyo {
-    scale: 0.8;
+    scale: 0.6;
 }
 
 .contact {
     text-align: center;
-    max-width: 26ch;
+    max-width: 44ch;
 
     a:hover {
         color: blue;
@@ -129,9 +176,15 @@ img {
         transform: rotate(0);
     }
 
+    h2,
+    p,
+    a {
+        font-size: 1rem;
+    }
+
     .fab {
         grid-row: unset;
-        border-radius: 60% 60% 1rem 1rem;
+        border-radius: 300px 300px 1rem 1rem;
         padding-bottom: 0.25rem;
     }
 
@@ -145,6 +198,10 @@ img {
 
     .magic-mountain h2 {
         font-size: 3.4rem;
+    }
+
+    .contact {
+        max-width: 26ch;
     }
 
     .contact a {
